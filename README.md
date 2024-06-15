@@ -24,6 +24,8 @@ sequenceDiagram
     activate server
     server-->>browser: Reloads the Notes page
     deactivate server
+
+    %% this is a comment %%
     
 ```
 
