@@ -1,7 +1,7 @@
 # full_stack_open
 Repository for Full Stack open
 
-# User creating a new note diagram
+# 0.4: User creating a new note diagram
 ```mermaid
 sequenceDiagram
     actor User
