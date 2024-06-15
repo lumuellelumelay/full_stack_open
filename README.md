@@ -75,10 +75,10 @@ sequenceDiagram
 
     server-->>browser: JSON file
     deactivate server
+    activate browser
 
     Note right of browser: The JavaScript code fetch the data from the server
 
-    activate browser
     browser-->>User: Displaying the page with the new data
     deactivate browser
 ```
