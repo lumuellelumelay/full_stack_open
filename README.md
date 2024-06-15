@@ -17,7 +17,7 @@ sequenceDiagram
     activate browser
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
 
-    Note right of browser: The from data is sent with HTTP POST to the server
+    Note right of browser: The form data is sent with HTTP POST to the server
 
     browser->>server: new GET request https://studies.cs.helsinki.fi/exampleapp/notes
     deactivate browser
