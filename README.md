@@ -10,7 +10,7 @@ sequenceDiagram
 
     User->>browser: creating a new note
     active browser
-    browser-->>User: displaying the note
+    browser->>User: displaying the note
     deactivate browser
 
     User->>browser: saving the new note
