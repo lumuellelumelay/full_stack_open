@@ -2,7 +2,7 @@
 
 ```mermaid
 ---
-title: 0.4: User creating a new note diagram
+title: 0.4 User creating a new note diagram
 ---
 sequenceDiagram
     actor User
