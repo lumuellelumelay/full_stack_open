@@ -14,8 +14,12 @@ sequenceDiagram
 
     Note right of browser: The from data is sent with HTTP POST to the server
 
+    deactivate browser
     browser->>server: new GET request https://studies.cs.helsinki.fi/exampleapp/notes
+    activate server
     server-->>browser: Reloads the Notes page
+    deactivaye browser
+    
     
 ```
 ```mermaid
