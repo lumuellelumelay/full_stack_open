@@ -23,7 +23,7 @@ sequenceDiagram
     server-->>browser: Status code: 302
     deactivate server
 
-    Note right of browser: The status code is 302, which the server request to perform a new HTTP GET to the header's Location
+    Note right of browser: The server request to perform a new HTTP GET to the header's Location
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
 
     activate server
@@ -70,6 +70,13 @@ sequenceDiagram
     participant server
 
     User->>browser: saving the new note
-    %%activate browser%%
+
+    activate server
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+    Note right of browser: The POST request contains the new note as JSON data
+
+    server-->>browser: JSON file
+    deactivate server
+    
 ```
