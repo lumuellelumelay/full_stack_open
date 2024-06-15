@@ -65,8 +65,10 @@ sequenceDiagram
     participant server
 
     User->>browser: saving the new note
+    activate browser
 
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+    deactivate browser
     activate server
 
     Note right of browser: The POST request contains the new note as JSON data
@@ -75,5 +77,8 @@ sequenceDiagram
     deactivate server
 
     Note right of browser: The JavaScript code fetch the data from the server
-    
+
+    activate browser
+    browser-->>User: Displaying the page with the new data
+    deactivate browser
 ```
