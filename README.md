@@ -18,7 +18,14 @@ sequenceDiagram
 
     Note right of browser: The form data is sent with HTTP POST to the server
 
-    browser->>server: new GET request https://studies.cs.helsinki.fi/exampleapp/notes
+    server-->>browser: Status code: 302
+    activate server
+
+    Note right of browser: The status code is 302, which the server request to perform a new HTTP GET to the header's Location
+
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
+    deactivate server
+
     deactivate browser
     activate server
     server-->>browser: Reloads the Notes page
