@@ -1,14 +1,14 @@
 # full_stack_open
 Repository for Full Stack open
 
-# testing
+# User creating a new note diagram
 ```mermaid
 sequenceDiagram
     actor User
     participant browser
     participant server
 
-    User->>browser: creating a new note
+    User->>browser: creating and saving a new note
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
     activate browser
 
@@ -20,8 +20,8 @@ sequenceDiagram
     server-->>browser: Reloads the Notes page
     deactivate server
     
-    
 ```
+
 ```mermaid
 sequenceDiagram
     participant browser
