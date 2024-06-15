@@ -8,9 +8,14 @@ sequenceDiagram
     participant browser
     participant server
 
-    User->>browser: creating and saving a new note
+    User->>browser: creating a new note
+    active browser
+    browser-->>browser: displaying the note
+    deactivate browser
+
+    User->>browser: saving the new note
+    active browser
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
-    activate browser
 
     Note right of browser: The from data is sent with HTTP POST to the server
 
