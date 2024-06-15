@@ -17,6 +17,7 @@ sequenceDiagram
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
 
     Note right of browser: The form data is sent with HTTP POST to the server
+    deactivate browser
 
     server-->>browser: Status code: 302
     activate server
@@ -26,7 +27,6 @@ sequenceDiagram
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     deactivate server
 
-    deactivate browser
     activate server
     server-->>browser: Reloads the Notes page
     deactivate server
