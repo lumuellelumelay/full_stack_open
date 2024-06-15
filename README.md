@@ -78,5 +78,7 @@ sequenceDiagram
 
     server-->>browser: JSON file
     deactivate server
+
+    Note right of browser: The JavaScript code fetch the data from the server
     
 ```
