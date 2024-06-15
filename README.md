@@ -7,11 +7,6 @@ sequenceDiagram
     participant browser
     participant server
 
-    User->>browser: creating a new note
-    activate browser
-    browser-->>User: displaying the note
-    deactivate browser
-
     User->>browser: saving the new note
     activate browser
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
