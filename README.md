@@ -9,9 +9,21 @@ sequenceDiagram
     participant server
 
     User->>browser: creating a new note
-    active browser
+    activate browser
     browser-->>User: displaying the note
     deactivate browser
+
+    User->>browser: saving the new note
+    activate browser
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
+
+    Note right of browser: The from data is sent with HTTP POST to the server
+
+    browser->>server: new GET request https://studies.cs.helsinki.fi/exampleapp/notes
+    deactivate browser
+    activate server
+    server-->>browser: Reloads the Notes page
+    deactivate server
     
 ```
 
