@@ -18,7 +18,7 @@ sequenceDiagram
     browser->>server: new GET request https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
     server-->>browser: Reloads the Notes page
-    deactivaye browser
+    deactivate browser
     
     
 ```
